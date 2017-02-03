@@ -149,7 +149,7 @@ class MainHandler(webapp2.RequestHandler):
             doubleCheck = True
 
         thisEmail = self.request.get("email")
-        if thisEmail != "" and re.match(r"^[\S]+@[\S]+.[\S]+$", thisEmail) is None:
+        if thisEmail != "" and re.match(r"^[\S]+@[\S]+[.][\S]+$", thisEmail) is None:
             emailError = "This is not a valid email address"
             doubleCheck = True
 
